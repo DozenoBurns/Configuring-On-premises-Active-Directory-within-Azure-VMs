@@ -32,7 +32,7 @@ This tutorial outlines the implementation of on-premises Active Directory within
   - While creating the VM, select the previously created Resource Group and Virtual Network—the Virtual Network MUST BE THE SAME.
   - Authentication type: Username/Password
 - Ensure both VMs are in the same Virtual Network / Subnet
-- End the lab, but keep both VMs for Part 2!
+- End the lab
 
 <h2>Deployment and Configuration Steps</h2>
 
