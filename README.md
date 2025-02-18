@@ -19,38 +19,46 @@ This tutorial outlines the implementation of on-premises Active Directory within
 
 <h2>Operating Systems Used </h2>
 
-- Windows Server 2022
-- Windows 10 (21H2)
+- Windows Server 2025
+- Windows 11 (21H2)
 
 <h2>High-Level Deployment and Configuration Steps</h2>
 
-- Step 1
-- Step 2
-- Step 3
-- Step 4
+- Create a Resource Group
+- Create a Windows 10 Virtual Machine (VM)
+  - While creating the VM, select the previously created Resource Group
+  - While creating the VM, allow it to create a new Virtual Network (Vnet) and Subnet
+- Create a Linux (Ubuntu) VM
+  - While creating the VM, select the previously created Resource Group and Virtual Network—the Virtual Network MUST BE THE SAME.
+  - Authentication type: Username/Password
+- Ensure both VMs are in the same Virtual Network / Subnet
+- End the lab, but keep both VMs for Part 2!
 
 <h2>Deployment and Configuration Steps</h2>
 
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img width="953" alt="Microsoft Azure VM Creation Screen Shot" src="https://github.com/user-attachments/assets/e9fffd4a-a531-4ef9-8295-dc6df71c328c" />
+
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+This screenshot shows a Windows and a Linux virtual machine (VM) successfully created in Microsoft Azure. Both VMs are now deployed and ready for use
 </p>
 <br />
 
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img width="757" alt="Screenshot RDP traffic capture in wireshark" src="https://github.com/user-attachments/assets/588c8d01-2216-42e0-b4b4-bbbe69987d34" />
+
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+This screenshot shows RDP (Remote Desktop Protocol) traffic being observed in Wireshark. You can see captured network packets that display the communication between a remote client and the Windows VM.
 </p>
 <br />
 
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img width="925" alt="Screenshot nslookup disney com DNS" src="https://github.com/user-attachments/assets/c97b85e6-0c6a-4241-a6b0-1cc9692c1b19" />
+
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+This screenshot shows the use of nslookup for disney.com while monitoring DNS traffic in Wireshark. You can see the DNS query being sent and the corresponding response resolving the domain to an IP address.
 </p>
 <br />
